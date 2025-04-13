@@ -18,3 +18,7 @@ jobs:
 
     - name: Run Maven tests
       run: mvn -B test
+
+    - name: Check test files integrity
+      run: |
+        git diff --exit-code origin/main src/test
